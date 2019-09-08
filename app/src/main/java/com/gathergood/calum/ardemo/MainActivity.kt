@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         // Set the onclick lister for our button
         // Change this string to point to the .sfb file of your choice :)
-        floatingActionButton.setOnClickListener { addObject(Uri.parse("NOVELO_EARTH.sfb")) }
+        floatingActionButton.setOnClickListener { addObject(Uri.parse("Francis.sfb")) }
         showFab(false)
 
     }
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateTracking(): Boolean {
         val frame = arFragment.arSceneView.arFrame
         val wasTracking = isTracking
-        isTracking = frame.camera.trackingState == TrackingState.TRACKING
+        isTracking = frame?.camera?.trackingState == TrackingState.TRACKING
         return isTracking != wasTracking
     }
 

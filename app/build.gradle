@@ -23,11 +23,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/menu'] } }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
@@ -41,3 +42,15 @@ sceneform.asset('sampledata/NOVELO_EARTH_obj_1I5ip-3VOfv_3LMrB56MuSq/NOVELO_EART
         'default',
         'sampledata/NOVELO_EARTH_obj_1I5ip-3VOfv_3LMrB56MuSq/NOVELO_EARTH.sfa',
         'src/main/assets/NOVELO_EARTH')
+
+sceneform.asset('sampledata/Tanya/tanya1.obj',
+        'default',
+        'sampledata/Tanya/tanya1.sfa',
+        'src/main/assets/tanya1')
+
+
+
+sceneform.asset('sampledata/francis/Francis.obj',
+        'default',
+        'sampledata/francis/Francis.sfa',
+        'src/main/assets/Francis')
